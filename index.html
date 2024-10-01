@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Portfolio - Shifa Imun</title>
+    <title>Shifa Imun</title>
     <style>
         /* General styling */
         body {
@@ -46,10 +46,6 @@
             text-decoration: none;
         }
 
-        .menu-icon {
-            display: none;
-        }
-
         /* Hero Section */
         .hero {
             height: 100vh;
@@ -63,9 +59,9 @@
         }
 
         .hero-img {
-            width: 150px;
+            width: 200px; /* Increased profile picture size */
             border-radius: 50%;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem; /* Reduced gap */
         }
 
         .hero-name {
@@ -83,6 +79,13 @@
             padding: 2rem;
             text-align: center;
             background: white;
+        }
+
+        /* Education Section */
+      .education-section {
+            padding: 2rem;
+            background: #f9f9f9;
+            text-align: center;
         }
 
         /* Skills Section */
@@ -129,6 +132,7 @@
             text-align: center;
             border-radius: 8px;
             transition: transform 0.3s;
+            cursor: pointer;
         }
 
         .project-card:hover {
@@ -143,6 +147,21 @@
             color: white;
         }
 
+        /* Certifications Section */
+        .certifications-section {
+            padding: 2rem;
+            text-align: center;
+            background: #f9f9f9;
+        }
+
+        .certification-item {
+            font-size: 1.2rem; /* Increased font size */
+            font-weight: bold; /* Made bold */
+            cursor: pointer; /* Pointer on hover */
+            color: #0000EE; /* Light blue color */
+            text-decoration: underline; /* Underline for links */
+        }
+
         /* Footer */
         .footer {
             background: #333;
@@ -150,6 +169,12 @@
             text-align: center;
             padding: 1rem;
             position: relative;
+        }
+
+        /* Custom Styles for Links */
+        .contact-section a {
+            color: lightblue; /* Changed color to light blue for LinkedIn and GitHub links */
+            text-decoration: none;
         }
 
         /* Scroll Animations */
@@ -163,7 +188,6 @@
             opacity: 1;
             transform: translateY(0);
         }
-
     </style>
 </head>
 <body>
@@ -173,15 +197,17 @@
         <div class="nav-logo">Shifa Imun</div>
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="#certifications">Certifications</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero">
-        <img src="https://res.cloudinary.com/dd0o9sf5m/image/upload/v1726404024/shifa_t1svau.jpg" alt=" Picture" class="hero-img">
+        <img src="https://res.cloudinary.com/dd0o9sf5m/image/upload/v1726404024/shifa_t1svau.jpg" alt="Picture" class="hero-img">
         <h1 class="hero-name">Shifa Imun</h1>
         <p class="hero-desc">Computer Science Student | Web Developer | Machine Learning Enthusiast</p>
     </section>
@@ -192,6 +218,20 @@
         <p>
             I'm a Computer Science Engineering student, passionate about developing applications and solving real-world problems. I love web development and learning about AI and machine learning.
         </p>
+    </section>
+
+   <section id="education" class="education-section fade-in">
+        <h2>Education</h2>
+        <p><strong>Bachelor of Technology in Computer Science Engineering, SR University, Hasanparthy</strong></p>
+        <p>CGPA: 9.69</p>
+        <p>Expected Graduation: 2026</p>
+
+        <h3><strong>Intermediate</strong></h3>
+        <p>Completed in SR Edu Centre, Hanamkonda in MPC stream .</p>
+        <p>Percentage: 97.4 </p>
+        <h3><strong>School</strong></h3>
+        <p>Completed Schooling in St. Ann's High School.</p>
+         <p>GPA: 10.0</p>
     </section>
 
     <!-- Skills Section -->
@@ -212,62 +252,85 @@
     <section id="projects" class="projects-section fade-in">
         <h2>Projects</h2>
         <div class="projects-grid">
-            <div class="project-card">
+            <div class="project-card" onclick="window.open('https://github.com/ShifaImun/My-Portfolio', '_blank')">
                 <h3>Portfolio Website</h3>
                 <p>A personal portfolio to showcase my skills and projects.</p>
             </div>
-            <div class="project-card">
+            <div class="project-card" onclick="window.open('https://github.com/ShifaImun/Rainfall-Prediction-Using-Machine-Learning-A-Comparative-Analysis-of-Classifier-Performance', '_blank')">
                 <h3>Machine Learning Model</h3>
-                <p>A predictive model for analyzing rainfall using Python.</p>
+                <p>A predictive model for analyzing rainfall using Python.It predicts rainfall categories using weather features like temperature, humidity, and wind speed. Three classifiers—Logistic Regression, XGBoost, and SVM—are compared, with XGBoost performing best. The full ML pipeline is detailed in this repository.</p>
             </div>
-            <div class="project-card">
+            <div class="project-card" onclick="window.open('https://github.com/ShifaImun/Inventory-Management-System', '_blank')">
                 <h3>Inventory Management System</h3>
-                <p>A fully functional inventory system built with C language.</p>
+                <p>A fully functional inventory system built with C language.It allows the users to perform various inventory management tasks. (Adding new items to the inventory, updating existing items, deleting items, and viewing the current inventory status).</p>
+            </div>
+<div class="project-card" onclick="window.open('https://github.com/ShifaImun/Smart-System-Display-Arduino-Uno-2.4-TFT-touchscreen-display', '_blank')">
+
+                        <h3>Smart System Display </h3>
+                <p>Designed and developed a Smart System Display using an Arduino and 2.4” TFT touchscreen display. Arduino-driven 2.4" TFT touchscreen for interactive control and real-time data display. Enables smart system functionality with touch-based input for automation tasks. Customizable graphical interface for versatile application.</p>
             </div>
         </div>
+    </section>
+
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications-section fade-in">
+        <h2>Certifications</h2>
+        <p class="certification-item" onclick="window.open('https://courses.edx.org/certificates/1f79474e63b943619f57f1b30b76ba39', '_blank')">IBM: Data Structures & Algorithms Using C++</p>
+        <p class="certification-item" onclick="window.open('IBMICECPP03: Data Structures & Algorithms Using C++', '_blank')">IBM: Introduction to Web Development with HTML5, CSS3, and JavaScript</p>
+<p class="certification-item" onclick="window.open('https://www.coursera.org/account/accomplishments/specialization/certificate/RBZYECBUXE7F', '_blank')">Codio: Introduction to Operating
+Systems</p>
+
+<p class="certification-item" onclick="window.open('https://coursera.org/verify/LXWZ8LFDGM3W', '_blank')">Google: Introduction to Project Management</p>
+<p class="certification-item" onclick="window.open('https://coursera.org/verify/YMFZ2XSVPHM9', '_blank')">Atlassian University: Version Control with Git</p>
+<p class="certification-item" onclick="window.open('https://coursera.org/share/40c2b994c82e402035a80801875dd877','_blank')">IBM: Introduction to Artificial Intelligence</p>
+
+
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact-section fade-in">
         <h2>Contact Me</h2>
-        <p>Email: shifa.imun@gmail.com</p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/shifa-imun">linkedin.com/in/shifa-imun</a></p>
-        <p>Github: <a href="https://github.com/ShifaImun">github.com/ShifaImun</a></p>
+        <p>If you want to get in touch, feel free to reach out via email or connect with me on social media.</p>
+        <p>Phone: <a href="#contactme">+91 7989300692</a></p> 
+        <p>Email: <a href="mailto:shifa.imun@gmail.com">shifa.imun@gmail.com</a></p>
+        <p>
+            <a href="https://www.linkedin.com/in/shifa-imun/" target="_blank">LinkedIn</a> |
+            <a href="https://github.com/ShifaImun" target="_blank">GitHub</a>
+            <a href="https://www.hackerrank.com/profile/shifa_imun" target="_blank">HackerRank</a>
+            <a href="https://www.credly.com/users/shifa-imun" target="_blank">Credly</a>
+
+
+          
+        </p>
     </section>
 
+    <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2024 Shifa Imun. All Rights Reserved.</p>
+        <p>&copy; 2024 Shifa Imun. All rights reserved.</p>
     </footer>
 
     <script>
-        // Smooth scroll animation for sections
-        document.querySelectorAll('.nav-links a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Fade-in effect on scroll
-        const faders = document.querySelectorAll('.fade-in');
-        const appearOptions = {
-            threshold: 0.5
+        // Scroll animations
+        const sections = document.querySelectorAll('section');
+        const observerOptions = {
+            root: null,
+            threshold: 0.1
         };
 
-        const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+        const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (!entry.isIntersecting) return;
-                entry.target.classList.add('active');
-                observer.unobserve(entry.target);
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                } else {
+                    entry.target.classList.remove('active');
+                }
             });
-        }, appearOptions);
+        }, observerOptions);
 
-        faders.forEach(fader => {
-            appearOnScroll.observe(fader);
+        sections.forEach(section => {
+            observer.observe(section);
         });
     </script>
-
 </body>
 </html>
